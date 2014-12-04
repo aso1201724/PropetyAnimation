@@ -24,4 +24,13 @@
         android:layout_marginTop="144dp"
         android:background="@drawable/ic_launcher" />
 
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="49dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:background="@drawable/ras" />
+
 </RelativeLayout>

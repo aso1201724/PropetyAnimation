@@ -34,6 +34,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		Button target = (Button)findViewById(R.id.target);
 		target.setOnClickListener(this);
 
+		Button bt = (Button)findViewById(R.id.bt);
+		bt.setOnClickListener(this);
+
+		ObjectAnimator objectAnimator2 = ObjectAnimator.ofFloat( bt, "alpha", 0f, 0f );
 
 
 
@@ -72,6 +76,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	    // アニメーションを開始します
 	    animatorSet.start();
+	    objectAnimator2.start();
 	}
 
 
@@ -81,15 +86,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		case R.id.target:
 
 			Button target = (Button)findViewById(R.id.target);
+			Button bt = (Button)findViewById(R.id.bt);
 
 			// rotationプロパティを0fから360fに変化させます
 		    ObjectAnimator objectAnimator = ObjectAnimator.ofFloat( target, "rotation", 0f, 360f );
+		    PropertyValuesHolder holderX = PropertyValuesHolder.ofFloat( "alpha", 0f, 1f );
+		    PropertyValuesHolder holderY = PropertyValuesHolder.ofFloat( "rotation", 0f, 360f );
+		    ObjectAnimator objectAnimator2 = ObjectAnimator.ofPropertyValuesHolder(
+		            bt, holderX, holderY );
+
 
 		    // 3秒かけて実行させます
 		    objectAnimator.setDuration( 3000 );
+		    objectAnimator2.setDuration( 3000 );
 
 		    // アニメーションを開始します
 		    objectAnimator.start();
+		    objectAnimator2.start();
 
 			break;
 		}

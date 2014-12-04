@@ -24,10 +24,12 @@ public final class R {
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
         public static final int night=0x7f020001;
-        public static final int voice=0x7f020002;
+        public static final int ras=0x7f020002;
+        public static final int voice=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f080002;
+        public static final int action_settings=0x7f080003;
+        public static final int bt=0x7f080002;
         public static final int target=0x7f080001;
         public static final int textView1=0x7f080000;
     }
